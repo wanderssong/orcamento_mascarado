@@ -594,7 +594,7 @@
 
       <div id="dadosPix" class="pix-box" style="display:none">
         <strong>Chave Pix:</strong> 46.056.737/0001-27 • <strong>Valor da entrada:</strong> R$ <span
-          id="valor-entrada">175,00</span>
+          id="valor-entrada">75,00</span>
       </div>
 
       <div class="agree">
@@ -623,7 +623,7 @@
     AOS.init();
 
     // ------- Dados da proposta (sincroniza com a UI) -------
-    const VALOR_PROPOSTA = 300; // Atualize aqui quando mudar o pacote
+    const VALOR_PROPOSTA = 150; // Atualize aqui quando mudar o pacote
     const valorTexto = document.getElementById('valor-texto');
     const valorTotal = document.getElementById('valor-total');
     const valorAceite = document.getElementById('valor-aceite');
@@ -699,9 +699,9 @@
     btnWhats.addEventListener('click', () => {
       const metodo = document.querySelector('input[name="pagto"]:checked')?.value || '';
       const mensagem = `Olá! Eu, ${nomeCliente.value.trim()}, confirmo o ACEITE da proposta no valor de R$ ${formatBR(VALOR_PROPOSTA)}.
-• Entrada de 50% (${formatBR(VALOR_PROPOSTA / 2)}) via ${metodo}.
-• Saldo de 50% na entrega do material.
-Contato: ${whatsCliente.value.trim()}`;
+     • Entrada de 50% (${formatBR(VALOR_PROPOSTA / 2)}) via ${metodo}.
+     • Saldo de 50% na entrega do material.
+     Contato: ${whatsCliente.value.trim()}`;
       const url = `https://wa.me/5568996129443?text=${encodeURIComponent(mensagem)}`;
       window.open(url, '_blank');
       fecharModalAceite();
